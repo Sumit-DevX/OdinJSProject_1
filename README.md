@@ -2,7 +2,7 @@
 
 ## Description
 
-A small, console-based Rock, Paper, Scissors game written in JavaScript. Play against the computer from the terminal. This project focuses on clean function design, using Math.random for computer choice, and applying conditional logic to decide round winners.
+A small, console-based Rock, Paper, Scissors game written in JavaScript. Play against the computer from the console.
 
 ## Features
 
