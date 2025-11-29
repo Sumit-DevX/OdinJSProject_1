@@ -1,0 +1,80 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 80px;
+    padding: 20px;
+}
+.container{
+    border: 2px solid black;
+    width: 500px;
+    height: 500px;
+    margin: auto;
+    padding: 20px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.scoreDisplay{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 50px;
+}
+
+.console {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 20px;
+    width: 80%;
+}
+
+.console .display {
+    width: 90%;
+    height: 10vh;
+    border: 4px solid blue;
+    padding: 10px;
+}
+
+.score {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.buttons{
+    height: 50vh;
+    padding: 20px;
+    display: flex;
+    gap: 40px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.buttons button {
+    height: 50px;
+    width: 100px;
+    cursor: pointer;
+}
+.buttons .deck1 {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    width: 100%;
+    padding: 8px;
+}
+
+.buttons .deck2 {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding: 8px;
+}
