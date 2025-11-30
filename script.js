@@ -1,3 +1,9 @@
+let display = document.querySelector(".display");
+let score = document.querySelector(".scoreDisplay");
+
+const buttons = document.querySelector(".buttons");
+
+
 function pickRandom(max){
     return Math.floor(Math.random() * max);
 }
@@ -11,16 +17,19 @@ function getComputerChoice(){
     return choices[randomIndex]
 }
 
+let humanChoice = null;
+buttons.addEventListener("click", (e) => {
+    if(e.target.tagName === "BUTTON"){
+        humanChoice = e.target.id;
+        playRound(humanChoice);
+    }
+});
 
-function getHumanChoice(){
-    let input = prompt("Enter your choice(Rock , Paper or Scissors): ");
-    return input.toLowerCase();
-}
 
 
-function playRound(){
+function playRound(hChoice){
 
-    const humanChoice = getHumanChoice();
+    const humanChoice = hChoice;
     const computerChoice = getComputerChoice();
 
 
@@ -59,32 +68,6 @@ function playRound(){
 
 function playGame(){
 
-    let humanScore = 0;
-    let computerScore = 0;
-
-    let i = 5;
-    do {
-        let round = playRound();
-        if(round === true){
-            ++humanScore;
-        }else if(round === false) {
-            ++computerScore;
-        }
-        i--;
-        console.log("\n");
-    }while(i != 0);
-
-
-    console.log(`Your Score: ${humanScore}`);
-    console.log(`Computer's Score: ${computerScore}`);
-    if(humanScore == computerScore){
-        console.log("Its a draw! Good Game");
-    }else if(humanScore > computerScore){
-        console.log("You are the Winner!!!")
-    }else {
-        console.log("You lost! Computer is the Winner");
-    }
 }
 
-
-playGame();
+playRound();
