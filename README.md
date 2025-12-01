@@ -2,16 +2,21 @@
 
 ## Description
 
-A small, console-based Rock, Paper, Scissors game written in JavaScript. Play against the computer from the terminal. This project focuses on clean function design, using Math.random for computer choice, and applying conditional logic to decide round winners.
+A Rock, Paper, Scissors game with a graphical user interface built with JavaScript and DOM manipulation. Play against the computer by clicking buttons in your browser. This project focuses on DOM event handling, dynamic UI updates, and game state management.
 
 ## Features
 
-- Play rounds of Rock, Paper, Scissors in the terminal
-- Simple, input-driven loop with basic validation
-- Clear separation of logic into reusable functions
+- Interactive GUI with clickable buttons for Rock, Paper, and Scissors
+- Real-time score tracking and round results display
+- Dynamic DOM updates without page refresh
+- Computer AI with random choice generation
+- Game state management and result validation
 
 ## What I learned
 
-- Structuring code with clear, small functions
-- Generating random choices with Math.random()
-- Implementing game logic using conditional statements
+- Manipulating the DOM with JavaScript to update the UI
+- Handling user events with click listeners and event handlers
+- Managing game state and updating the display dynamically
+- Structuring code with reusable functions for game logic and UI rendering
+- Implementing conditional logic for round winners and score updates
+
