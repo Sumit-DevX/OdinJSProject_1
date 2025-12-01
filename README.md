@@ -2,7 +2,6 @@
 
 ## Description
 
-
 A Rock, Paper, Scissors game with a graphical user interface built with JavaScript and DOM manipulation. Play against the computer by clicking buttons in your browser. This project focuses on DOM event handling, dynamic UI updates, and game state management.
 
 ## Features
