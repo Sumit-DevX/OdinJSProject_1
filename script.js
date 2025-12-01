@@ -26,6 +26,7 @@ buttons.addEventListener("click", (e) => {
     if(e.target.tagName === "BUTTON"){
         humanChoice = e.target.id;
         playRound(humanChoice);
+        finalResult();
     }
 });
 
@@ -109,6 +110,18 @@ function updateScore(hChoice,cChoice){
         }if(cChoice == "paper"){
             humanScore++;
             hScore.textContent = humanScore;
+        }
+    }
+}
+
+function finalResult(){
+    if(humanScore == 5 || computerScore == 5){
+        if(humanScore == 5){
+            alert("You Won Cogratulation!!");
+            window.location.reload();
+        }else{
+            alert("You lost T_T, better luck next time");
+            window.location.reload();
         }
     }
 }
