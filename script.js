@@ -3,6 +3,10 @@ let score = document.querySelector(".scoreDisplay");
 
 const buttons = document.querySelector(".buttons");
 
+let hScore = document.querySelector(".hScore");
+let cScore = document.querySelector(".cScore");
+let humanScore = 0;
+let computerScore  = 0;
 
 function pickRandom(max){
     return Math.floor(Math.random() * max);
@@ -12,9 +16,9 @@ function pickRandom(max){
 function getComputerChoice(){
     const choices = ["rock", "paper", "scissors"];
 
-    let randomIndex = pickRandom(3)
+    let randomIndex = pickRandom(3);
 
-    return choices[randomIndex]
+    return choices[randomIndex];
 }
 
 let humanChoice = null;
@@ -31,13 +35,13 @@ function playRound(hChoice){
 
     const humanChoice = hChoice;
     const computerChoice = getComputerChoice();
-
+    
     displayResult(humanChoice,computerChoice);
+
+    updateScore(humanChoice,computerChoice);
 }
 
-function playGame(){
 
-}
 
 function displayResult(humanChoice, computerChoice){
     display.textContent = "";
@@ -73,5 +77,38 @@ function displayResult(humanChoice, computerChoice){
     display.appendChild(human);
     display.appendChild(computer);
     display.appendChild(result);
+
+    console.log(humanScore);
+    console.log(computerScore);
 }
 
+function updateScore(hChoice,cChoice){
+
+    if(hChoice == cChoice){
+        return 0;
+    }else if(hChoice == "rock"){
+        if(cChoice == "paper"){
+            computerScore++;
+            cScore.textContent = computerScore;
+        }if(cChoice == "scissors"){
+            humanScore++;
+            hScore.textContent = humanScore;
+        }
+    }else if(hChoice == "paper"){
+        if(cChoice == "rock"){
+           ++humanScore;
+           hScore.textContent = humanScore;
+        }if(cChoice == "scissors"){
+           computerScore++;
+           cScore.textContent = computerScore;
+        }
+    }else if(humanChoice == "scissors"){
+        if(cChoice == "rock"){
+            computerScore++;
+            cScore.textContent = computerScore;
+        }if(cChoice == "paper"){
+            humanScore++;
+            hScore.textContent = humanScore;
+        }
+    }
+}
