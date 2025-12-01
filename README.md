@@ -2,11 +2,8 @@
 
 ## Description
 
-<<<<<<< HEAD
-A small, console-based Rock, Paper, Scissors game written in JavaScript. Play against the computer from the console.
-=======
+
 A Rock, Paper, Scissors game with a graphical user interface built with JavaScript and DOM manipulation. Play against the computer by clicking buttons in your browser. This project focuses on DOM event handling, dynamic UI updates, and game state management.
->>>>>>> 7c19bad (Update README)
 
 ## Features
 
